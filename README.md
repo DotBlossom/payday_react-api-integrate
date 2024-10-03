@@ -12,3 +12,4 @@
   3. gpu 환경 아니면 model이 overhead를 못버티고 금방 종료됨
       - gpu or k8s에서 실행
   
+contextAPI stateProp : noRenderAriseSave , if session is end -> process save
