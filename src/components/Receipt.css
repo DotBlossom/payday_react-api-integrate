@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex ;
+    justify-content: center ;
+    align-items: start ;
+    background-color: #C8DBF0 ;
+    margin: 0 ;
+    min-height: 100vh;
+  }
+  
+.receipt-style {
+background-color: white;
+width: 100%;
+
+padding: 81px 57px 0 57px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+text-align: center;
+min-height: 950px;
+min-width: 700px;
+margin: 0 auto;
+}
+
+.app-name {
+margin-bottom: 36px;
+font-size: 50px;
+font-weight: bold;
+color: #1E1E1E;
+}
+
+.explanation {
+margin-bottom: 25px;
+font-size: 16px;
+font-weight: normal;
+color: #4B4B4B;
+padding: 0px 44px 0 44px;
+width: auto; 
+text-align: center;
+}

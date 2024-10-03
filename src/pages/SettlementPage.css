@@ -1,0 +1,519 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.settlement-page {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh; /* 화면에 꽉 차게 */
+    background-color: #c8dbf0; /* 배경색 */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.header-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title {
+    margin: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+.total-amount {
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+}
+.image-preview-list {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px; /* 세로 간격을 20px로 설정 */
+    column-gap: 30px; /* 가로 간격을 15px로 설정 */
+    max-width: 100%;
+    height: 600px;
+    align-content: flex-start;
+    overflow: hidden;
+    background-color: #f8f3f1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+}
+
+.image-preview-list img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.preview-image {
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.preview-image.selected {
+    border: 2px solid blue; /* 선택된 이미지는 파란색 테두리로 표시 */
+}
+
+.link-copy {
+    width: 50%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #4b4b4b;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+    align-self: center;
+}
+
+.link-tooltip {
+    padding-top: 10px;
+    font-size: 13px;
+    align-self: center;
+}
+.main-content {
+    margin: 20px;
+    padding: 20px;
+    width: 768px;
+    height: 800px;
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8f3f1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    position: relative; /* To position the index absolutely */
+}
+
+.content-index {
+    
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    width: 24px; 
+    height: 24px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-container {
+    width: 60%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.receipt-block {
+    width: 100%;
+    height: 730px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.edit-button {
+    color: black;
+    background: white;
+    border: 1px solid #888888;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background: #e4e4e4;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt-header h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+
+.receipt-header p {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin: 5px 0;
+}
+
+.receipt-content {
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.receipt-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.receipt-content th,
+.receipt-content td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    font-size: 16px;
+}
+
+.receipt-content th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333333;
+}
+
+.receipt-content td {
+    background-color: #f9f9f9;
+    color: #2e2e2e;
+}
+
+.receipt-content td button {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #2e2e2e;
+    background-color: #e4e4e4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.receipt-content td button:hover {
+    background-color: #808080;
+}
+
+.receipt-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e2e2e;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #dddddd;
+}
+
+.member-status {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.member-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.circle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1000;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    bottom: 120%; /* 툴팁을 상단에 위치시키기 위해 변경 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.selected-items {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 400px; /* Limit the height to allow scrolling */
+    position: relative;
+}
+
+.selected-items h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: #2e2e2e;
+}
+
+.selected-items h5 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888888;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.selected-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selected-items li {
+    padding: 10px;
+    font-size: 16px;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.selected-items li:hover {
+    background-color: #f9f9f9;
+}
+
+.selected-items li span {
+    color: #ff0000; /* Highlight the invalid item */
+    font-weight: bold;
+}
+
+.selected-items p {
+    margin-bottom: 5px;
+}
+
+.button-group {
+    margin: 10px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.button-group button {
+    width: 100%;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 10px 20px;
+    border: 2px solid #4b4b4b;
+    border-radius: 2px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+    /* 가장 작은 화면에서는 이미지 프리뷰 리스트를 숨김 */
+    .image-preview-list {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker, semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Smooth transition when opening/closing */
+}
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+}
+
+.modal-content h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2e2e2e;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+.modal-content img:hover {
+    transform: scale(1.05);
+}
+
+.modal-content div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+}
+
+.modal-actions button:hover {
+    transform: translateY(-2px);
+    background-color: #808080;
+}
+
+.modal-actions button:active {
+    transform: translateY(0);
+}
+
+.modal-actions button {
+    background-color: #e4e4e4;
+}
+
+.img-modal-content {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.img-modal-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.img-modal-content img {
+    max-width: 100%;
+    max-height: 70vh; /* Adjust based on available space */
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.2s ease;
+}
+
+.close-icon:hover {
+    color: #ff5c5c;
+}

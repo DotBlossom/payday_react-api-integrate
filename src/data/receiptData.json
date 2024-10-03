@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "ResultimgURL": "https://dummyimage.com/600x400/000/fff&text=Processed+Image+1",
+      "imgURL": "https://dummyimage.com/600x400/000/fff&text=Original+Image+1",
+      "answer_text": {
+        "title": "단토리",
+        "date": "2024/06/19 19:08",
+        "address": "서울 강서구 공항대로 247",
+        "items": [
+          { "name": "공깃밥", "price": 3000, "quantity": 3 },
+          { "name": "코크 하이볼", "price": 3900, "quantity": 1 },
+          { "name": "토마토 하이볼", "price": 5900, "quantity": 1 }
+        ]
+      },
+      "order": 1
+    },
+    {
+      "id": 2,
+      "ResultimgURL": "https://dummyimage.com/600x400/000/fff&text=Processed+Image+2",
+      "imgURL": "https://dummyimage.com/600x400/000/fff&text=Original+Image+2",
+      "answer_text": {
+        "title": "초밥천국",
+        "date": "2024/06/15 18:45",
+        "address": "서울 마포구 양화로 123",
+        "items": [
+          { "name": "초밥 세트", "price": 15000, "quantity": 2 },
+          { "name": "사케", "price": 12000, "quantity": 1 },
+          { "name": "튀김", "price": 8000, "quantity": 1 }
+        ]
+      },
+      "order": 2
+    },
+    {
+      "id": 3,
+      "ResultimgURL": "https://dummyimage.com/600x400/000/fff&text=Processed+Image+3",
+      "imgURL": "https://dummyimage.com/600x400/000/fff&text=Original+Image+3",
+      "answer_text": {
+        "title": "치킨마을",
+        "date": "2024/07/01 20:30",
+        "address": "서울 강남구 테헤란로 45",
+        "items": [
+          { "name": "치킨", "price": 18000, "quantity": 1 },
+          { "name": "맥주", "price": 4000, "quantity": 2 },
+          { "name": "감자튀김", "price": 5000, "quantity": 1 }
+        ]
+      },
+      "order": 3
+    }
+  ]
+  

@@ -1,0 +1,51 @@
+
+.total-amount {
+    margin: 20px 0 50px 0; 
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.person-amount {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+.person-amount .amount {
+    color: red;
+}
+
+.remaining-amount {
+    margin-top: 50px; 
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.remaining-amount .amount {
+    color: red;
+}
+
+.random-draw-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 214px;
+    height: 66px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #333333;
+
+    align-self: center; 
+}
+
+.random-draw-button:hover {
+    background-color: #A0A0A0;
+}
+
+h5 {
+    color: #888888;
+}
