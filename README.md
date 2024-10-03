@@ -7,6 +7,7 @@
   2. axios parallel data fetch -> 갑작스런 Promise.all로의 변경
       - contextAPI에서, render UseRef Boolean 도입
       - initial type 와 FetchIsOver type 분리 가능
+      - fetch - render timing 일치 문제 해결
   3. gpu 환경 아니면 model이 overhead를 못버티고 금방 종료됨
       - gpu or k8s에서 실행
-     
+  
