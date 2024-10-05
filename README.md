@@ -27,3 +27,15 @@ contextAPI stateProp : noRenderAriseSave , if session is end -> process save
 
 ## link 요청을 통한 instant room 구조.
 그것을 위한 spring backend 구성
+
+## k8s 배포 구현
+![sssd](https://github.com/user-attachments/assets/115ed7d7-b8a4-4acf-9ff2-47b98b140f1b)
+
+각 yaml 파일 작성 및 배포 순서 등 결정.
+
+  1. ingress-nginx/cloud를 linux cloud에 설치, LB의 external IP or DomainName sh로직으로 가져옴
+  2. LB로 구성한 내부 API 서비스들을 ingress에 routing 하고, ingress 외부 접근 주소 ( LB의 external IP or DomainName)를
+     각 서버단 API 요청에 root URL 로 삽입 후 image push
+  3. 상황에 따라, configMap-> DB -> 이후는 유동적으로 배포 순서 결정(이미지 build를 각자 상황에 맞게 유동적으로 중간중간 하는 경우 존재)
+  4. secret key를 configMap secret || linux container 내부에 접속하여, 파일 생성 후 echo > filename 해주자
+  5. ingress-config.yaml 을 k8s에 적용 후, 전체 server 확정 구동.
