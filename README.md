@@ -12,21 +12,21 @@
     3. gpu 환경 아니면 model이 overhead를 못버티고 금방 종료됨
         - gpu or k8s에서 실행
     
-contextAPI stateProp : noRenderAriseSave , if session is end -> process save
+### contextAPI stateProp : noRenderAriseSave , if session is end -> process save
 
 ## 특이 구조
-  1. image upload 사이즈에 맞는 dummy context 생성을 함
-  2. 그리고 imageURL(cloud)를 받아 다음 상태로 넘김 + dummydata(loading)
-      - 요청부터 idx를 이용하여, 개별 response를 context state에 fetch
-  3. contextAPI에서 예측결과를 비동기적으로 받아와 로딩완료
-
+      1. image upload 사이즈에 맞는 dummy context 생성을 함
+      2. 그리고 imageURL(cloud)를 받아 다음 상태로 넘김 + dummydata(loading)
+          - 요청부터 idx를 이용하여, 개별 response를 context state에 fetch
+      3. contextAPI에서 예측결과를 비동기적으로 받아와 로딩완료
+    
 
 ## 추가 repositoty
-### https://github.com/DotBlossom/flask-api-actual
-### https://github.com/DotBlossom/payday_springboot-main
+    https://github.com/DotBlossom/flask-api-actual
+    https://github.com/DotBlossom/payday_springboot-main
 
 ## link 요청을 통한 instant room 구조.
-그것을 위한 spring backend 구성
+    그것을 위한 spring backend 구성
 
 ## k8s 배포 구현
 ![sssd](https://github.com/user-attachments/assets/3eab83dd-a0da-4e42-8c53-1dd0e068f33c)
