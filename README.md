@@ -22,8 +22,8 @@ contextAPI stateProp : noRenderAriseSave , if session is end -> process save
 
 
 ## 추가 repositoty
-https://github.com/DotBlossom/flask-api-actual
-https://github.com/DotBlossom/payday_springboot-main
+### https://github.com/DotBlossom/flask-api-actual
+### https://github.com/DotBlossom/payday_springboot-main
 
 ## link 요청을 통한 instant room 구조.
 그것을 위한 spring backend 구성
