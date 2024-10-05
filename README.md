@@ -29,9 +29,10 @@ contextAPI stateProp : noRenderAriseSave , if session is end -> process save
 그것을 위한 spring backend 구성
 
 ## k8s 배포 구현
-![sssd](https://github.com/user-attachments/assets/115ed7d7-b8a4-4acf-9ff2-47b98b140f1b)
+![sssd](https://github.com/user-attachments/assets/3eab83dd-a0da-4e42-8c53-1dd0e068f33c)
 
-각 yaml 파일 작성 및 배포 순서 등 결정.
+
+### 각 yaml 파일 작성 및 배포 순서 등 결정.
 
   1. ingress-nginx/cloud를 linux cloud에 설치, LB의 external IP or DomainName sh로직으로 가져옴
   2. LB로 구성한 내부 API 서비스들을 ingress에 routing 하고, ingress 외부 접근 주소 ( LB의 external IP or DomainName)를
