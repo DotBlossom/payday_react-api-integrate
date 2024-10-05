@@ -24,8 +24,14 @@ gcp k8s cluster로 올리고 요청 받으면 정규화 되어 정보가 와서 
     
 
 ## 추가 repositoty
-    https://github.com/DotBlossom/flask-api-actual
-    https://github.com/DotBlossom/payday_springboot-main
+
+### https://github.com/DotBlossom/flask-api-actual
+flask api buffer 서버 구조 설명
+
+
+### https://github.com/DotBlossom/payday_springboot-main
+jwt 구조가 아닌 임시 link-instant_user 구조
+
 
 ## link 요청을 통한 instant room 구조.
     그것을 위한 spring backend 구성
