@@ -17,4 +17,5 @@ contextAPI stateProp : noRenderAriseSave , if session is end -> process save
 ## 특이 구조
   1. image upload 사이즈에 맞는 dummy context 생성을 함
   2. 그리고 imageURL(cloud)를 받아 다음 상태로 넘김 + dummydata(loading)
+      - 요청부터 idx를 이용하여, 개별 response를 context state에 fetch
   3. contextAPI에서 예측결과를 비동기적으로 받아와 로딩완료
