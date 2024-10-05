@@ -1,6 +1,8 @@
 ## image
 ![fafafafs1](https://github.com/user-attachments/assets/59b7e007-c589-476b-b63d-fe2ae4847427)
 
+gcp k8s cluster로 올리고 요청 받으면 정규화 되어 정보가 와서 ,local api 실행 이미지 올림
+
 ## problem -> solve
     1. 데이터 상세 구조 불일치
         - response object 내부구조, 자료형 미통일
